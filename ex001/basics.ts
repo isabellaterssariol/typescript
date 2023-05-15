@@ -54,3 +54,48 @@ let carro: any = 'BMW';
 console.log(carro);
 carro = {marca: 'BMW', ano: 2019}
 console.log(carro)
+
+// functions
+function retornaMeuNome(): string { //-> retornará uma string
+    return nome
+    //return minhaIdade -> não dará certo pois não é uma string
+}
+
+console.log(retornaMeuNome())
+
+function digaOi(): void {
+    console.log('Oi')
+    //return minhaIdade -> a função não deve retornar nada então independente do console.log ela não irá ter retorno no console
+}
+
+digaOi()
+
+
+function multiplicar(numA: number, numB: number): number {
+    return numA * numB
+}
+
+//console.log(multiplicar(2, 'Bia'))
+console.log(multiplicar(4, 7))
+
+// tipo função
+let calculo:  (numeroA: number, numeroB: number) => number
+// calculo = digaOi
+// calculo()
+
+calculo = multiplicar
+console.log(calculo(5, 6))
+
+
+// objetos 
+let usuario: { nome: string, idade: number} = {
+    nome: 'João',
+    idade: 27
+}
+console.log(usuario)
+
+usuario  = {
+    idade: 31,
+    nome: 'Maria'
+}
+console.log(usuario)
